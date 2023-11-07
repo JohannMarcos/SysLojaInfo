@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="frmCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCadastroCargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCadastroCidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCadastroClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCadastroCondPag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCadastroEstados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCadastroFormaPag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCadastroFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCadastroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCadastroMedidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCadastroPaises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCadastroPessoas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCadastroServicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmConsultaCargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmConsultaCondPag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmConsultaFormPag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmConsultaMedidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmConsultaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmConsultaServicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmConsultaFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmConsultaFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmConsultaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmConsultaCidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmConsultaEstados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmConsultaPaises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmPai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
