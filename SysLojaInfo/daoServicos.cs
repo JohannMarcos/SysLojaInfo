@@ -8,6 +8,6 @@ namespace SysLojaInfo
 {
     internal class daoServicos: SysLojaInfo.dao
     {
-        
+        a
     }
 }
