@@ -151,15 +151,15 @@
         }
 
         #endregion
-        private Label lblDatUltAlt;
-        private Label lblQuemAlt;
-        private Button btnSair;
-        public Button btnSalvar;
         public TextBox txtCodigo;
+        public Label lblCodigo;
+        public Button btnSalvar;
         public TextBox txtDatCad;
         public TextBox txtDatUltAlt;
         public TextBox txtQuemAlt;
-        public Label lblCodigo;
         public Label lblDatCad;
+        public Button btnSair;
+        public Label lblQuemAlt;
+        public Label lblDatUltAlt;
     }
 }
