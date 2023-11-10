@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtNota = new TextBox();
+            txtSerieNota = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            txtModeloNota = new TextBox();
             label3 = new Label();
-            textBox4 = new TextBox();
+            txtCodEmitente = new TextBox();
             label4 = new Label();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            button1 = new Button();
+            txtCpfCnpj = new TextBox();
+            txtEmitente = new TextBox();
+            btnBuscarEmitente = new Button();
             tabControl1 = new TabControl();
             tbProd = new TabPage();
-            dataGridView1 = new DataGridView();
+            dgProd = new DataGridView();
             codigo = new DataGridViewTextBoxColumn();
             produto = new DataGridViewTextBoxColumn();
             umedida = new DataGridViewTextBoxColumn();
@@ -50,37 +50,52 @@
             desconto = new DataGridViewTextBoxColumn();
             total = new DataGridViewTextBoxColumn();
             label8 = new Label();
-            textBox12 = new TextBox();
+            txtQtd = new TextBox();
             label7 = new Label();
-            textBox11 = new TextBox();
+            txtDesc = new TextBox();
             label6 = new Label();
-            textBox10 = new TextBox();
-            textBox9 = new TextBox();
-            button4 = new Button();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
+            txtPreço = new TextBox();
+            txtProduto = new TextBox();
+            btnPesqProd = new Button();
+            txtUnidMed = new TextBox();
+            txtCodProd = new TextBox();
             label5 = new Label();
-            button3 = new Button();
-            button2 = new Button();
+            btnRmvProd = new Button();
+            btnAddProd = new Button();
             tbPag = new TabPage();
             label9 = new Label();
-            textBox13 = new TextBox();
+            txtValorBruto = new TextBox();
             label10 = new Label();
-            textBox14 = new TextBox();
+            txtDesconto = new TextBox();
             label11 = new Label();
-            textBox15 = new TextBox();
+            txtFrete = new TextBox();
             label12 = new Label();
-            textBox16 = new TextBox();
+            txtSeguro = new TextBox();
             label13 = new Label();
-            textBox17 = new TextBox();
+            txtOutros = new TextBox();
             label14 = new Label();
-            textBox18 = new TextBox();
+            txtValorTotal = new TextBox();
             label15 = new Label();
-            richTextBox1 = new RichTextBox();
+            rTxtDados = new RichTextBox();
+            label16 = new Label();
+            txtCodCond = new TextBox();
+            dataGridView1 = new DataGridView();
+            txtCondicaoPag = new TextBox();
+            btnBuscaCond = new Button();
+            parcela = new DataGridViewTextBoxColumn();
+            venc = new DataGridViewTextBoxColumn();
+            valor = new DataGridViewTextBoxColumn();
             tabControl1.SuspendLayout();
             tbProd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgProd).BeginInit();
+            tbPag.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
+            // 
+            // lblCodigo
+            // 
+            lblCodigo.Size = new Size(53, 15);
+            lblCodigo.Text = "Controle";
             // 
             // btnSalvar
             // 
@@ -123,19 +138,19 @@
             label1.TabIndex = 10;
             label1.Text = "Número da Nota";
             // 
-            // textBox1
+            // txtNota
             // 
-            textBox1.Location = new Point(147, 43);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 11;
+            txtNota.Location = new Point(147, 43);
+            txtNota.Name = "txtNota";
+            txtNota.Size = new Size(100, 23);
+            txtNota.TabIndex = 11;
             // 
-            // textBox2
+            // txtSerieNota
             // 
-            textBox2.Location = new Point(253, 43);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(40, 23);
-            textBox2.TabIndex = 13;
+            txtSerieNota.Location = new Point(253, 43);
+            txtSerieNota.Name = "txtSerieNota";
+            txtSerieNota.Size = new Size(40, 23);
+            txtSerieNota.TabIndex = 13;
             // 
             // label2
             // 
@@ -146,12 +161,12 @@
             label2.TabIndex = 12;
             label2.Text = "Série";
             // 
-            // textBox3
+            // txtModeloNota
             // 
-            textBox3.Location = new Point(299, 43);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 15;
+            txtModeloNota.Location = new Point(299, 43);
+            txtModeloNota.Name = "txtModeloNota";
+            txtModeloNota.Size = new Size(100, 23);
+            txtModeloNota.TabIndex = 15;
             // 
             // label3
             // 
@@ -162,12 +177,13 @@
             label3.TabIndex = 14;
             label3.Text = "Modelo";
             // 
-            // textBox4
+            // txtCodEmitente
             // 
-            textBox4.Location = new Point(29, 94);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(54, 23);
-            textBox4.TabIndex = 17;
+            txtCodEmitente.Enabled = false;
+            txtCodEmitente.Location = new Point(29, 94);
+            txtCodEmitente.Name = "txtCodEmitente";
+            txtCodEmitente.Size = new Size(54, 23);
+            txtCodEmitente.TabIndex = 17;
             // 
             // label4
             // 
@@ -178,29 +194,31 @@
             label4.TabIndex = 16;
             label4.Text = "Emitente";
             // 
-            // textBox5
+            // txtCpfCnpj
             // 
-            textBox5.Location = new Point(89, 94);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(158, 23);
-            textBox5.TabIndex = 18;
+            txtCpfCnpj.Enabled = false;
+            txtCpfCnpj.Location = new Point(89, 94);
+            txtCpfCnpj.Name = "txtCpfCnpj";
+            txtCpfCnpj.Size = new Size(158, 23);
+            txtCpfCnpj.TabIndex = 18;
             // 
-            // textBox6
+            // txtEmitente
             // 
-            textBox6.Location = new Point(253, 94);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(260, 23);
-            textBox6.TabIndex = 19;
-            textBox6.TextChanged += textBox6_TextChanged;
+            txtEmitente.Enabled = false;
+            txtEmitente.Location = new Point(253, 94);
+            txtEmitente.Name = "txtEmitente";
+            txtEmitente.Size = new Size(260, 23);
+            txtEmitente.TabIndex = 19;
+            txtEmitente.TextChanged += textBox6_TextChanged;
             // 
-            // button1
+            // btnBuscarEmitente
             // 
-            button1.Location = new Point(519, 93);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 20;
-            button1.Text = "Buscar";
-            button1.UseVisualStyleBackColor = true;
+            btnBuscarEmitente.Location = new Point(519, 93);
+            btnBuscarEmitente.Name = "btnBuscarEmitente";
+            btnBuscarEmitente.Size = new Size(75, 23);
+            btnBuscarEmitente.TabIndex = 20;
+            btnBuscarEmitente.Text = "Buscar";
+            btnBuscarEmitente.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
@@ -214,20 +232,20 @@
             // 
             // tbProd
             // 
-            tbProd.Controls.Add(dataGridView1);
+            tbProd.Controls.Add(dgProd);
             tbProd.Controls.Add(label8);
-            tbProd.Controls.Add(textBox12);
+            tbProd.Controls.Add(txtQtd);
             tbProd.Controls.Add(label7);
-            tbProd.Controls.Add(textBox11);
+            tbProd.Controls.Add(txtDesc);
             tbProd.Controls.Add(label6);
-            tbProd.Controls.Add(textBox10);
-            tbProd.Controls.Add(textBox9);
-            tbProd.Controls.Add(button4);
-            tbProd.Controls.Add(textBox7);
-            tbProd.Controls.Add(textBox8);
+            tbProd.Controls.Add(txtPreço);
+            tbProd.Controls.Add(txtProduto);
+            tbProd.Controls.Add(btnPesqProd);
+            tbProd.Controls.Add(txtUnidMed);
+            tbProd.Controls.Add(txtCodProd);
             tbProd.Controls.Add(label5);
-            tbProd.Controls.Add(button3);
-            tbProd.Controls.Add(button2);
+            tbProd.Controls.Add(btnRmvProd);
+            tbProd.Controls.Add(btnAddProd);
             tbProd.Location = new Point(4, 24);
             tbProd.Name = "tbProd";
             tbProd.Padding = new Padding(3);
@@ -236,18 +254,18 @@
             tbProd.Text = "Produtos Entrada";
             tbProd.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgProd
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { codigo, produto, umedida, quant, preco, desconto, total });
-            dataGridView1.Location = new Point(15, 100);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(853, 210);
-            dataGridView1.TabIndex = 32;
+            dgProd.AllowUserToAddRows = false;
+            dgProd.AllowUserToDeleteRows = false;
+            dgProd.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgProd.Columns.AddRange(new DataGridViewColumn[] { codigo, produto, umedida, quant, preco, desconto, total });
+            dgProd.Location = new Point(15, 100);
+            dgProd.Name = "dgProd";
+            dgProd.RowHeadersVisible = false;
+            dgProd.RowTemplate.Height = 25;
+            dgProd.Size = new Size(853, 210);
+            dgProd.TabIndex = 32;
             // 
             // codigo
             // 
@@ -310,12 +328,12 @@
             label8.TabIndex = 31;
             label8.Text = "Quantidade";
             // 
-            // textBox12
+            // txtQtd
             // 
-            textBox12.Location = new Point(772, 29);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(96, 23);
-            textBox12.TabIndex = 30;
+            txtQtd.Location = new Point(772, 29);
+            txtQtd.Name = "txtQtd";
+            txtQtd.Size = new Size(96, 23);
+            txtQtd.TabIndex = 30;
             // 
             // label7
             // 
@@ -327,13 +345,13 @@
             label7.Text = "Desconto";
             label7.Click += label7_Click;
             // 
-            // textBox11
+            // txtDesc
             // 
-            textBox11.Location = new Point(670, 30);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(96, 23);
-            textBox11.TabIndex = 28;
-            textBox11.TextChanged += textBox11_TextChanged;
+            txtDesc.Location = new Point(670, 30);
+            txtDesc.Name = "txtDesc";
+            txtDesc.Size = new Size(96, 23);
+            txtDesc.TabIndex = 28;
+            txtDesc.TextChanged += textBox11_TextChanged;
             // 
             // label6
             // 
@@ -344,43 +362,46 @@
             label6.TabIndex = 27;
             label6.Text = "Preço Unitário";
             // 
-            // textBox10
+            // txtPreço
             // 
-            textBox10.Location = new Point(568, 30);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(96, 23);
-            textBox10.TabIndex = 26;
+            txtPreço.Location = new Point(568, 30);
+            txtPreço.Name = "txtPreço";
+            txtPreço.Size = new Size(96, 23);
+            txtPreço.TabIndex = 26;
             // 
-            // textBox9
+            // txtProduto
             // 
-            textBox9.Location = new Point(99, 30);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(92, 23);
-            textBox9.TabIndex = 25;
+            txtProduto.Enabled = false;
+            txtProduto.Location = new Point(99, 30);
+            txtProduto.Name = "txtProduto";
+            txtProduto.Size = new Size(235, 23);
+            txtProduto.TabIndex = 25;
             // 
-            // button4
+            // btnPesqProd
             // 
-            button4.Location = new Point(424, 29);
-            button4.Name = "button4";
-            button4.Size = new Size(115, 23);
-            button4.TabIndex = 24;
-            button4.Text = "Buscar Produto";
-            button4.UseVisualStyleBackColor = true;
+            btnPesqProd.Location = new Point(424, 29);
+            btnPesqProd.Name = "btnPesqProd";
+            btnPesqProd.Size = new Size(115, 23);
+            btnPesqProd.TabIndex = 24;
+            btnPesqProd.Text = "Buscar Produto";
+            btnPesqProd.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // txtUnidMed
             // 
-            textBox7.Location = new Point(197, 30);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(212, 23);
-            textBox7.TabIndex = 23;
-            textBox7.TextChanged += textBox7_TextChanged;
+            txtUnidMed.Enabled = false;
+            txtUnidMed.Location = new Point(340, 30);
+            txtUnidMed.Name = "txtUnidMed";
+            txtUnidMed.Size = new Size(69, 23);
+            txtUnidMed.TabIndex = 23;
+            txtUnidMed.TextChanged += textBox7_TextChanged;
             // 
-            // textBox8
+            // txtCodProd
             // 
-            textBox8.Location = new Point(15, 29);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(78, 23);
-            textBox8.TabIndex = 22;
+            txtCodProd.Enabled = false;
+            txtCodProd.Location = new Point(15, 29);
+            txtCodProd.Name = "txtCodProd";
+            txtCodProd.Size = new Size(78, 23);
+            txtCodProd.TabIndex = 22;
             // 
             // label5
             // 
@@ -391,27 +412,32 @@
             label5.TabIndex = 21;
             label5.Text = "Produto";
             // 
-            // button3
+            // btnRmvProd
             // 
-            button3.Location = new Point(160, 71);
-            button3.Name = "button3";
-            button3.Size = new Size(128, 23);
-            button3.TabIndex = 1;
-            button3.Text = "Remover Produto";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btnRmvProd.Location = new Point(160, 71);
+            btnRmvProd.Name = "btnRmvProd";
+            btnRmvProd.Size = new Size(128, 23);
+            btnRmvProd.TabIndex = 1;
+            btnRmvProd.Text = "Remover Produto";
+            btnRmvProd.UseVisualStyleBackColor = true;
+            btnRmvProd.Click += button3_Click;
             // 
-            // button2
+            // btnAddProd
             // 
-            button2.Location = new Point(15, 71);
-            button2.Name = "button2";
-            button2.Size = new Size(128, 23);
-            button2.TabIndex = 0;
-            button2.Text = "Adicionar Produto";
-            button2.UseVisualStyleBackColor = true;
+            btnAddProd.Location = new Point(15, 71);
+            btnAddProd.Name = "btnAddProd";
+            btnAddProd.Size = new Size(128, 23);
+            btnAddProd.TabIndex = 0;
+            btnAddProd.Text = "Adicionar Produto";
+            btnAddProd.UseVisualStyleBackColor = true;
             // 
             // tbPag
             // 
+            tbPag.Controls.Add(btnBuscaCond);
+            tbPag.Controls.Add(txtCondicaoPag);
+            tbPag.Controls.Add(dataGridView1);
+            tbPag.Controls.Add(txtCodCond);
+            tbPag.Controls.Add(label16);
             tbPag.Location = new Point(4, 24);
             tbPag.Name = "tbPag";
             tbPag.Padding = new Padding(3);
@@ -429,12 +455,12 @@
             label9.TabIndex = 29;
             label9.Text = "Valor Bruto";
             // 
-            // textBox13
+            // txtValorBruto
             // 
-            textBox13.Location = new Point(29, 521);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(147, 23);
-            textBox13.TabIndex = 28;
+            txtValorBruto.Location = new Point(29, 521);
+            txtValorBruto.Name = "txtValorBruto";
+            txtValorBruto.Size = new Size(147, 23);
+            txtValorBruto.TabIndex = 28;
             // 
             // label10
             // 
@@ -445,12 +471,12 @@
             label10.TabIndex = 31;
             label10.Text = "Descontos";
             // 
-            // textBox14
+            // txtDesconto
             // 
-            textBox14.Location = new Point(193, 521);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(147, 23);
-            textBox14.TabIndex = 30;
+            txtDesconto.Location = new Point(193, 521);
+            txtDesconto.Name = "txtDesconto";
+            txtDesconto.Size = new Size(147, 23);
+            txtDesconto.TabIndex = 30;
             // 
             // label11
             // 
@@ -461,12 +487,12 @@
             label11.TabIndex = 33;
             label11.Text = "Frete";
             // 
-            // textBox15
+            // txtFrete
             // 
-            textBox15.Location = new Point(357, 521);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(147, 23);
-            textBox15.TabIndex = 32;
+            txtFrete.Location = new Point(357, 521);
+            txtFrete.Name = "txtFrete";
+            txtFrete.Size = new Size(147, 23);
+            txtFrete.TabIndex = 32;
             // 
             // label12
             // 
@@ -477,12 +503,12 @@
             label12.TabIndex = 35;
             label12.Text = "Seguro";
             // 
-            // textBox16
+            // txtSeguro
             // 
-            textBox16.Location = new Point(519, 521);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(147, 23);
-            textBox16.TabIndex = 34;
+            txtSeguro.Location = new Point(519, 521);
+            txtSeguro.Name = "txtSeguro";
+            txtSeguro.Size = new Size(147, 23);
+            txtSeguro.TabIndex = 34;
             // 
             // label13
             // 
@@ -493,12 +519,12 @@
             label13.TabIndex = 37;
             label13.Text = "Outros";
             // 
-            // textBox17
+            // txtOutros
             // 
-            textBox17.Location = new Point(681, 521);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(147, 23);
-            textBox17.TabIndex = 36;
+            txtOutros.Location = new Point(681, 521);
+            txtOutros.Name = "txtOutros";
+            txtOutros.Size = new Size(147, 23);
+            txtOutros.TabIndex = 36;
             // 
             // label14
             // 
@@ -509,12 +535,12 @@
             label14.TabIndex = 39;
             label14.Text = "Valor Total ";
             // 
-            // textBox18
+            // txtValorTotal
             // 
-            textBox18.Location = new Point(895, 521);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(147, 23);
-            textBox18.TabIndex = 38;
+            txtValorTotal.Location = new Point(895, 521);
+            txtValorTotal.Name = "txtValorTotal";
+            txtValorTotal.Size = new Size(147, 23);
+            txtValorTotal.TabIndex = 38;
             // 
             // label15
             // 
@@ -525,59 +551,125 @@
             label15.TabIndex = 40;
             label15.Text = "Dados Adicionais";
             // 
-            // richTextBox1
+            // rTxtDados
             // 
-            richTextBox1.Location = new Point(29, 576);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(1013, 57);
-            richTextBox1.TabIndex = 41;
-            richTextBox1.Text = "";
+            rTxtDados.ImeMode = ImeMode.Off;
+            rTxtDados.Location = new Point(29, 576);
+            rTxtDados.Name = "rTxtDados";
+            rTxtDados.Size = new Size(1013, 57);
+            rTxtDados.TabIndex = 41;
+            rTxtDados.Text = "";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(17, 15);
+            label16.Name = "label16";
+            label16.Size = new Size(138, 15);
+            label16.TabIndex = 0;
+            label16.Text = "Condição de Pagamento";
+            // 
+            // txtCodCond
+            // 
+            txtCodCond.Location = new Point(17, 33);
+            txtCodCond.Name = "txtCodCond";
+            txtCodCond.Size = new Size(63, 23);
+            txtCodCond.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { parcela, venc, valor });
+            dataGridView1.Location = new Point(17, 62);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(425, 247);
+            dataGridView1.TabIndex = 2;
+            // 
+            // txtCondicaoPag
+            // 
+            txtCondicaoPag.Location = new Point(86, 33);
+            txtCondicaoPag.Name = "txtCondicaoPag";
+            txtCondicaoPag.Size = new Size(271, 23);
+            txtCondicaoPag.TabIndex = 3;
+            // 
+            // btnBuscaCond
+            // 
+            btnBuscaCond.Location = new Point(367, 32);
+            btnBuscaCond.Name = "btnBuscaCond";
+            btnBuscaCond.Size = new Size(75, 23);
+            btnBuscaCond.TabIndex = 4;
+            btnBuscaCond.Text = "Alterar";
+            btnBuscaCond.UseVisualStyleBackColor = true;
+            // 
+            // parcela
+            // 
+            parcela.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            parcela.HeaderText = "Nº Parcela";
+            parcela.Name = "parcela";
+            parcela.ReadOnly = true;
+            // 
+            // venc
+            // 
+            venc.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            venc.HeaderText = "Vencimento";
+            venc.Name = "venc";
+            venc.ReadOnly = true;
+            venc.Width = 150;
+            // 
+            // valor
+            // 
+            valor.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            valor.HeaderText = "Valor";
+            valor.Name = "valor";
+            valor.ReadOnly = true;
             // 
             // frmCadastroCompras
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1071, 693);
-            Controls.Add(richTextBox1);
+            Controls.Add(rTxtDados);
             Controls.Add(label15);
             Controls.Add(label14);
-            Controls.Add(textBox18);
+            Controls.Add(txtValorTotal);
             Controls.Add(label13);
-            Controls.Add(textBox17);
+            Controls.Add(txtOutros);
             Controls.Add(label12);
-            Controls.Add(textBox16);
+            Controls.Add(txtSeguro);
             Controls.Add(label11);
-            Controls.Add(textBox15);
+            Controls.Add(txtFrete);
             Controls.Add(label10);
-            Controls.Add(textBox14);
+            Controls.Add(txtDesconto);
             Controls.Add(label9);
-            Controls.Add(textBox13);
+            Controls.Add(txtValorBruto);
             Controls.Add(tabControl1);
-            Controls.Add(button1);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
+            Controls.Add(btnBuscarEmitente);
+            Controls.Add(txtEmitente);
+            Controls.Add(txtCpfCnpj);
+            Controls.Add(txtCodEmitente);
             Controls.Add(label4);
-            Controls.Add(textBox3);
+            Controls.Add(txtModeloNota);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(txtSerieNota);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtNota);
             Controls.Add(label1);
             Name = "frmCadastroCompras";
             Text = "frmCadastroCompras";
             Load += frmCadastroCompras_Load;
             Controls.SetChildIndex(label1, 0);
-            Controls.SetChildIndex(textBox1, 0);
+            Controls.SetChildIndex(txtNota, 0);
             Controls.SetChildIndex(label2, 0);
-            Controls.SetChildIndex(textBox2, 0);
+            Controls.SetChildIndex(txtSerieNota, 0);
             Controls.SetChildIndex(label3, 0);
-            Controls.SetChildIndex(textBox3, 0);
+            Controls.SetChildIndex(txtModeloNota, 0);
             Controls.SetChildIndex(label4, 0);
-            Controls.SetChildIndex(textBox4, 0);
-            Controls.SetChildIndex(textBox5, 0);
-            Controls.SetChildIndex(textBox6, 0);
-            Controls.SetChildIndex(button1, 0);
+            Controls.SetChildIndex(txtCodEmitente, 0);
+            Controls.SetChildIndex(txtCpfCnpj, 0);
+            Controls.SetChildIndex(txtEmitente, 0);
+            Controls.SetChildIndex(btnBuscarEmitente, 0);
             Controls.SetChildIndex(lblCodigo, 0);
             Controls.SetChildIndex(txtCodigo, 0);
             Controls.SetChildIndex(txtDatCad, 0);
@@ -589,23 +681,26 @@
             Controls.SetChildIndex(btnSalvar, 0);
             Controls.SetChildIndex(btnSair, 0);
             Controls.SetChildIndex(tabControl1, 0);
-            Controls.SetChildIndex(textBox13, 0);
+            Controls.SetChildIndex(txtValorBruto, 0);
             Controls.SetChildIndex(label9, 0);
-            Controls.SetChildIndex(textBox14, 0);
+            Controls.SetChildIndex(txtDesconto, 0);
             Controls.SetChildIndex(label10, 0);
-            Controls.SetChildIndex(textBox15, 0);
+            Controls.SetChildIndex(txtFrete, 0);
             Controls.SetChildIndex(label11, 0);
-            Controls.SetChildIndex(textBox16, 0);
+            Controls.SetChildIndex(txtSeguro, 0);
             Controls.SetChildIndex(label12, 0);
-            Controls.SetChildIndex(textBox17, 0);
+            Controls.SetChildIndex(txtOutros, 0);
             Controls.SetChildIndex(label13, 0);
-            Controls.SetChildIndex(textBox18, 0);
+            Controls.SetChildIndex(txtValorTotal, 0);
             Controls.SetChildIndex(label14, 0);
             Controls.SetChildIndex(label15, 0);
-            Controls.SetChildIndex(richTextBox1, 0);
+            Controls.SetChildIndex(rTxtDados, 0);
             tabControl1.ResumeLayout(false);
             tbProd.ResumeLayout(false);
             tbProd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgProd).EndInit();
+            tbPag.ResumeLayout(false);
+            tbPag.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -614,31 +709,31 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtNota;
+        private TextBox txtSerieNota;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox txtModeloNota;
         private Label label3;
-        private TextBox textBox4;
+        private TextBox txtCodEmitente;
         private Label label4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private Button button1;
+        private TextBox txtCpfCnpj;
+        private TextBox txtEmitente;
+        private Button btnBuscarEmitente;
         private TabControl tabControl1;
         private TabPage tbProd;
         private TabPage tbPag;
-        private Button button3;
-        private Button button2;
-        private Button button4;
-        private TextBox textBox7;
-        private TextBox textBox8;
+        private Button btnRmvProd;
+        private Button btnAddProd;
+        private Button btnPesqProd;
+        private TextBox txtUnidMed;
+        private TextBox txtCodProd;
         private Label label5;
-        private TextBox textBox9;
+        private TextBox txtProduto;
         private Label label7;
-        private TextBox textBox11;
+        private TextBox txtDesc;
         private Label label6;
-        private TextBox textBox10;
-        private DataGridView dataGridView1;
+        private TextBox txtPreço;
+        private DataGridView dgProd;
         private DataGridViewTextBoxColumn codigo;
         private DataGridViewTextBoxColumn produto;
         private DataGridViewTextBoxColumn umedida;
@@ -647,20 +742,28 @@
         private DataGridViewTextBoxColumn desconto;
         private DataGridViewTextBoxColumn total;
         private Label label8;
-        private TextBox textBox12;
+        private TextBox txtQtd;
         private Label label9;
-        private TextBox textBox13;
+        private TextBox txtValorBruto;
         private Label label10;
-        private TextBox textBox14;
+        private TextBox txtDesconto;
         private Label label11;
-        private TextBox textBox15;
+        private TextBox txtFrete;
         private Label label12;
-        private TextBox textBox16;
+        private TextBox txtSeguro;
         private Label label13;
-        private TextBox textBox17;
+        private TextBox txtOutros;
         private Label label14;
-        private TextBox textBox18;
+        private TextBox txtValorTotal;
         private Label label15;
-        private RichTextBox richTextBox1;
+        private RichTextBox rTxtDados;
+        private DataGridView dataGridView1;
+        private TextBox txtCodCond;
+        private Label label16;
+        private Button btnBuscaCond;
+        private TextBox txtCondicaoPag;
+        private DataGridViewTextBoxColumn parcela;
+        private DataGridViewTextBoxColumn venc;
+        private DataGridViewTextBoxColumn valor;
     }
 }
