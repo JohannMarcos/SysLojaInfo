@@ -1,88 +1,94 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="frmCadastro.cs">
+    <Compile Update="FormsCadastros\frmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmCadastroCargos.cs">
+    <Compile Update="FormsCadastros\frmCadastroCargos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmCadastroCidades.cs">
+    <Compile Update="FormsCadastros\frmCadastroCidades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmCadastroClientes.cs">
+    <Compile Update="FormsCadastros\frmCadastroClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmCadastroCompras.cs">
+    <Compile Update="FormsCadastros\frmCadastroCondPag.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmCadastroCondPag.cs">
+    <Compile Update="FormsCadastros\frmCadastroCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmCadastroEstados.cs">
+    <Compile Update="FormsCadastros\frmCadastroEstados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmCadastroFormaPag.cs">
+    <Compile Update="FormsCadastros\frmCadastroFormaPag.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmCadastroFornecedores.cs">
+    <Compile Update="FormsCadastros\frmCadastroFornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmCadastroFuncionario.cs">
+    <Compile Update="FormsCadastros\frmCadastroFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmCadastroMedidas.cs">
+    <Compile Update="FormsCadastros\frmCadastroMedidas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmCadastroPaises.cs">
+    <Compile Update="FormsCadastros\frmCadastroOS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmCadastroPessoas.cs">
+    <Compile Update="FormsCadastros\frmCadastroPaises.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmCadastroProduto.cs">
+    <Compile Update="FormsCadastros\frmCadastroPessoas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmCadastroServicos.cs">
+    <Compile Update="FormsCadastros\frmCadastroProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmConsultaCargos.cs">
+    <Compile Update="FormsCadastros\frmCadastroServicos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmConsultaCondPag.cs">
+    <Compile Update="FormsConsultas\frmConsultaCargos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmConsultaFormPag.cs">
+    <Compile Update="FormsConsultas\frmConsultaCondPag.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmConsultaMedidas.cs">
+    <Compile Update="FormsConsultas\frmConsultaFormPag.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmConsultaProdutos.cs">
+    <Compile Update="FormsConsultas\frmConsultaMedidas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmConsultaServicos.cs">
+    <Compile Update="FormsConsultas\frmConsultaProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmConsultaFornecedores.cs">
+    <Compile Update="FormsConsultas\frmConsultaServicos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmConsultaFuncionario.cs">
+    <Compile Update="FormsConsultas\frmConsultaFornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmConsultaClientes.cs">
+    <Compile Update="FormsConsultas\frmConsultaFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmConsultaCidades.cs">
+    <Compile Update="FormsConsultas\frmConsultaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmConsultaEstados.cs">
+    <Compile Update="FormsConsultas\frmConsultaCidades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmConsultaPaises.cs">
+    <Compile Update="FormsConsultas\frmConsultaEstados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmConsulta.cs">
+    <Compile Update="FormsConsultas\frmConsultaPaises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormsConsultas\frmConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormsConsultas\frmConsultaCompras.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmPai.cs">

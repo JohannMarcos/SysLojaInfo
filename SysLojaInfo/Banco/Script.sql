@@ -67,10 +67,14 @@ create table CondPag (
 create table Parcelas (
     nParc int not null,
     dias  int not null,
-    percen decimal (3,2) not null,
-    cod_Cond int references CondPag (codCond) not null,
-    primary key (cod_Cond, nParc)
+    percen decimal (5,2) not null,
+    codCond int,
+    codForma Int,
+    foreign key (codForma) references FormaPag (idForma),
+    foreign key(codCond) references CondPag (idCond),
+    primary key (codCond, nParc)
 );
+
 
 create table Cargos (
     idCargo int auto_increment primary key,
@@ -80,11 +84,14 @@ create table Cargos (
     datAlt datetime,
     idUser int
 );
+drop table Clientes;
+drop table funcionarios;
+drop table fornecedores;
 
 create table Clientes (
     idCliente int auto_increment primary key,
     nome varchar (50) not null,
-    cpfCnpj  varchar (11) not null,
+    cpfCnpj  varchar (18) not null,
     rg varchar (12),
     logr varchar (140) not null,
     num int not null,
@@ -106,7 +113,7 @@ create table Clientes (
 create table Fornecedores (
     idForn int auto_increment primary key,
     nome varchar (50) not null,
-    cpfCnpj  varchar (11) not null,
+    cpfCnpj  varchar (18) not null,
     rg varchar (12),
     logr varchar (140) not null,
     num int not null,
@@ -128,7 +135,7 @@ create table Fornecedores (
 create table Funcionarios (
     idFunc int auto_increment primary key,
     nome varchar (50) not null,
-    cpfCnpj  varchar (11) not null,
+    cpfCnpj  varchar (18) not null,
     rg varchar (12),
     cnh varchar (11),
     dataCnh datetime,
@@ -248,5 +255,38 @@ VALUES
 ('VASIL', 'VASILHAME', 'N', NOW(), 0),
 ('VIDRO', 'VIDRO', 'N', NOW(), 0);
 
+create table NotaEntrada (
+nNota int not null,
+serieNota varchar(20) not null,
+modeloNota Varchar (02) not null,
+cod_Emit int not null,
+dtEmissao datetime not null,
+dtChegada datetime not null,
+vItensBruto float not null,
+vDescItens float not null,
+vFrete float not null,
+vSeguro float not null,
+vOutros float not null,
+vTotalNota float not null,
+datCad datetime,
+datAlt datetime,
+idUser int not null,
+foreign key (cod_Emit) References Fornecedores (idForn),
+primary key(nNota, serieNota, modeloNota, cod_Emit)
+);
 
-
+create table ItensNotaEntrada (
+nNota int not null,
+serieNota varchar (20) not null,
+modeloNota varchar (2) not null,
+cod_Emit int not null,
+cod_produto int not null,
+precoUnit  float not null,
+descUnit float not null,
+descPercent float not null,
+qtd int not null,
+totalProd float not null,
+foreign key (nNota, serieNota, modeloNota, cod_Emit) references NotaEntrada (nNota, serieNota, modeloNota, cod_Emit),
+foreign key (cod_produto) references produtos (idProduto),
+primary key (nNota, serieNota, modeloNota, cod_Emit, cod_produto)
+);

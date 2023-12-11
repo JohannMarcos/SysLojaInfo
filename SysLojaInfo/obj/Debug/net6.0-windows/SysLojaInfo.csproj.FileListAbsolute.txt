@@ -63,3 +63,6 @@ C:\Users\PDIVI-110\source\repos\SysLojaInfo\SysLojaInfo\obj\Debug\net6.0-windows
 C:\Users\PDIVI-110\source\repos\SysLojaInfo\SysLojaInfo\obj\Debug\net6.0-windows\SysLojaInfo.genruntimeconfig.cache
 C:\Users\PDIVI-110\source\repos\SysLojaInfo\SysLojaInfo\obj\Debug\net6.0-windows\ref\SysLojaInfo.dll
 C:\Users\PDIVI-110\source\repos\SysLojaInfo\SysLojaInfo\obj\Debug\net6.0-windows\SysLojaInfo.frmCadastroCompras.resources
+C:\Users\PDIVI-110\source\repos\SysLojaInfo\SysLojaInfo\obj\Debug\net6.0-windows\SysLojaInfo.Properties.Resources.resources
+C:\Users\PDIVI-110\source\repos\SysLojaInfo\SysLojaInfo\obj\Debug\net6.0-windows\SysLojaInfo.frmCadastroOS.resources
+C:\Users\PDIVI-110\source\repos\SysLojaInfo\SysLojaInfo\obj\Debug\net6.0-windows\SysLojaInfo.frmConsultaCompras.resources
